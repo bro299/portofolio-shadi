@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            overflow-x: hidden;
+        }
+        .electronic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, rgba(0,255,0,0.1), transparent),
+                linear-gradient(135deg, rgba(0,0,0,0.2), transparent);
+            z-index: -1;
+            animation: bg-shift 10s ease infinite;
+        }
+        @keyframes bg-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .circuit-line {
+            position: absolute;
+            background: linear-gradient(to right, #00ff00, #005500);
+            opacity: 0.3;
+            animation: circuit-move 5s linear infinite;
+        }
+        @media (max-width: 640px) {
+            .profile-image {
+                width: 200px !important;
+                height: 200px !important;
+            }
+            .main-title {
+                font-size: 2rem !important;
+            }
+            .section-title {
+                font-size: 1.5rem !important;
+            }
+            .project-card {
+                flex-direction: column !important;
+            }
+        }
+    </style>
+</head>
+<body class="text-green-300">
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="electronic-bg"></div>
+    
+    <div class="container mx-auto px-4 py-8 md:py-16 relative z-10">
+        <div class="flex flex-col items-center">
+            <img 
+                src="1.jpeg" 
+                alt="Profile" 
+                class="profile-image w-64 h-64 rounded-full object-cover shadow-2xl border-4 border-green-500"
+            />
+            
+            <h1 class="main-title text-4xl font-bold mt-6 text-green-400 text-center">
+                Shadi
+            </h1>
+            
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4 mt-4">
+                <a href="https://instagram.com/your_instagram_username" target="_blank" class="text-green-400 hover:text-green-200 text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/your_github_username" target="_blank" class="text-green-400 hover:text-green-200 text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <div class="mt-8 w-full max-w-xl">
+                <h2 class="section-title text-2xl mb-4 text-center text-green-300">
+                    Projek Saya
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-black/60 p-4 rounded-lg border border-green-800 hover:border-green-500 transition">
+                        <div class="project-card flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl text-green-400">MediaFetch</h3>
+                                <p class="text-green-200 mb-2">Website untuk mengunduh media video atau foto dari media sosial menggunakan api external</p>
+                            </div>
+                            <a href="https://mediafetctmini.vercel.app/" target="_blank" class="text-green-400 hover:text-green-200">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">React js</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Node.js</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Tailwind css</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Google Fonts & Font Awesome</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-black/60 p-4 rounded-lg border border-green-800 hover:border-green-500 transition">
+                        <div class="project-card flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl text-green-400">Snaptoolkit</h3>
+                                <p class="text-green-200 mb-2">Website sekumpulan alat untuk kebutuhan sehari hari menggunakan api external.</p>
+                            </div>
+                            <a href="https://snaptoolkit.vercel.app/" target="_blank" class="text-green-400 hover:text-green-200">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">HTML5</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Tailwind css</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">GSAP</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Utility Classes</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Font Awesome</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-black/60 p-4 rounded-lg border border-green-800 hover:border-green-500 transition">
+                        <div class="project-card flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl text-green-400">CerdasBudi</h3>
+                                <p class="text-green-200 mb-2">Website yang menampilkan layanan ai psikolog namun bukan ai psikolog sungguhan atau masih menggunakan ai yang ada seperti gemini serta ada fitur suara untuk yang malas membaca.</p>
+                            </div>
+                            <a href="https://cerdasbudi.vercel.app/" target="_blank" class="text-green-400 hover:text-green-200">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">HTML5</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Tailwind Css</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Font Awesome & Google Fonts</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">SweetAlert2</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Javascript Vanilla</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">AI Gemini</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-black/60 p-4 rounded-lg border border-green-800 hover:border-green-500 transition">
+                        <div class="project-card flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl text-green-400">Checker Berita</h3>
+                                <p class="text-green-200 mb-2">Website untuk memvalidasi berita atau untuk memvalidasi apakah berita tersebut hoak namun tidak 100% akurat karena menggunakan ai gemini untuk menscan berita yang ada</p>
+                            </div>
+                            <a href="https://checker-berita.vercel.app/" target="_blank" class="text-green-400 hover:text-green-200">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">HTML5</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Tailwind Css</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">Font Awesome</span>
+                            <span class="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300">AI Gemini</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Circuit lines background function
+        function createCircuitLines() {
+            const bg = document.querySelector('.electronic-bg');
+            bg.innerHTML = ''; // Clear previous lines
+            for(let i = 0; i < 20; i++) {
+                const line = document.createElement('div');
+                line.classList.add('circuit-line');
+                line.style.width = `${Math.random() * 200}px`;
+                line.style.height = `${Math.random() * 2}px`;
+                line.style.top = `${Math.random() * 100}%`;
+                line.style.left = `${Math.random() * 100}%`;
+                line.style.animationDuration = `${5 + Math.random() * 10}s`;
+                bg.appendChild(line);
+            }
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            createCircuitLines();
+            
+            // SweetAlert Welcome Message
+            Swal.fire({
+                title: 'Selamat Datang!',
+                text: 'Selamat datang di halaman portofolio saya.',
+                icon: 'success',
+                confirmButtonText: 'Mulai',
+                background: '#0a0a0a',
+                color: '#00ff00',
+                confirmButtonColor: '#00ff00',
+                willClose: () => {
+                    // Automatically play music when alert is closed
+                    const music = document.getElementById('backgroundMusic');
+                    music.volume = 0.3; // Set volume to 30%
+                    music.play().catch(error => {
+                        console.log('Autoplay prevented. User interaction required.');
+                    });
+                }
+            });
+        });
+
+        // Ensure responsive behavior on window resize
+        window.addEventListener('resize', createCircuitLines);
+    </script>
+</body>
+</html>
